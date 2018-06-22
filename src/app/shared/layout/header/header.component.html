@@ -1,0 +1,31 @@
+<header>
+  <div class="header-content">
+    <div class="header-content-inner" [ngsRevealSet]="{ reset:true}" [ngsInterval]="400" [ngsSelector]="'.btn,i.fa'">
+      <h1 id="homeHeading">Shivam Singh</h1>
+      <hr>
+      <p style="color:white">Researcher | Developer | Wanderer | Hobby Cook | Avid Reader</p>
+      <hr>
+      <a href="https://www.twitter.com/sshivamsngh" target="_blank" rel="noopener" class="btn btn-social-icon btn-twitter">
+        <span class="fa fa-4x fa-twitter"></span>
+      </a>
+      <a href="https://www.github.com/shivamsngh" target="_blank" rel="noopener" class="btn btn-social-icon btn-github">
+        <span class="fa fa-4x fa-github"></span>
+      </a>
+      <a href="https://www.linkedin.com/in/shivamsngh" target="_blank" rel="noopener" class="btn btn-social-icon btn-linkedin">
+        <span class="fa fa-4x fa-linkedin"></span>
+      </a>
+      <p></p>
+      <p style="color:black;transform:scale(-1)">
+        <i class="fa fa-quote-left" aria-hidden="true"></i> Kitkat , Batman, Rayban...
+        <i class="fa fa-quote-right" aria-hidden="true"></i>
+      </p>
+    </div>
+  </div>
+  <!-- News, Events and Updates -->
+  <div class="side-bar" id="eventsarea">
+    <div id="eventscreen">
+      <app-recent-event-card [events]="events"></app-recent-event-card>
+    </div>
+  </div>
+  <!-- /News, Events and Updates -->
+</header>

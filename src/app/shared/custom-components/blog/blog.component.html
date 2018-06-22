@@ -1,0 +1,12 @@
+
+    <i class="fa fa-4x fa-rss text-primary sr-icons"></i>
+    <h3>Blog</h3>
+    <div class="text-muted">
+      <ul class="rss-items">
+        <li class="rss-item" *ngFor="let blog of blogs">
+          <a href="{{blog.url}}" target="_blank" rel=noopener>{{blog.title}}</a>
+          <br>
+          <span [innerHTML]="blog.content"></span>
+        </li>
+      </ul>
+    </div>

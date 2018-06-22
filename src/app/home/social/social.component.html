@@ -1,0 +1,37 @@
+<section id="services" [ngsRevealSet]="{ reset:true}" [ngsInterval]="60" [ngsSelector]="'.sr-icons'">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h2 class="section-heading">Social</h2>
+				<hr class="primary">
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<!-- Blog -->
+			<div class="col-lg-4 col-md-8 text-center">
+				<div class="service-box">
+					<app-blog [blogs]="social.blogs"></app-blog>
+				</div>
+			</div>
+			<!-- /Blog -->
+
+			<!-- Twitter -->
+			<div class="col-lg-4 col-md-8 text-center">
+				<div class="service-box">
+					<app-twitter></app-twitter>
+				</div>
+			</div>
+			<!-- /Twitter -->
+
+			<!-- Books -->
+			<div class="col-lg-4 col-md-8 text-center">
+				<div class="service-box">
+					<app-book-library [books]="books"></app-book-library>
+				</div>
+			</div>
+			<!-- /Books -->
+		</div>
+	</div>
+</section>

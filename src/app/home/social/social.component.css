@@ -1,0 +1,8 @@
+div ul.rss-items li.rss-item{
+max-height: 100px;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+div ul.rss-items li.rss-item span div:first-child   {
+display: none;
+    }

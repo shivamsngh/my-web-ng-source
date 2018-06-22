@@ -1,0 +1,19 @@
+<ng-container *ngIf="photoDetails | async as photos">
+  <div class="photo-grid" style="background: rgba(93, 159, 183, 0.7);" *ngFor="let photo of photos[0].jumpsStats[0].allPhotoBlogData; let i=index">
+    <div class="photo-detail outer-box" [style.order]="i % 2 === 0 ? 1 : 2">
+      <h2>{{photo.caption}}</h2>
+      <h4>
+        <i class="fa fa-quote-left" aria-hidden="true"></i>
+        <i> {{photo.quote}} </i>
+        <i class="fa fa-min fa-quote-right" aria-hidden="true"></i>
+      </h4>
+      <h4>{{photo.detail}}</h4>
+      <sub>{{photo.timestamp}}</sub>
+    </div>
+    <div class="photo-full outer-box" [style.order]="i % 2 === 0 ? 2 : 1">
+      <div class="inner-box">
+        <img src="assets/img/bungy/optimized/{{photo.photoId}}" />
+      </div>
+    </div>
+  </div>
+</ng-container>

@@ -1,0 +1,26 @@
+<header class="blogPage">
+    <div id="jumpvideo" [ngClass]="{'show': showVideoPoster}">
+        <video poster="assets/img/bungy/optimized/thesuspension_0.jpg" id="bgvid" playsinline muted autoplay loop #jumpvid>
+            <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+            <source src="assets/video/leapofaplutonian.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="header-content">
+        <div class="header-content-inner">
+            <h1>Rishikesh</h1>
+            <hr>
+            <p>Bungy Jump | 83 mts | Highest in India</p>
+            <div *ngIf="details.length>0; then link">
+            </div>
+            <ng-template #link>
+                    <a id="bungyloc" href="{{details[0].jumpsStats[0].mapLocation}}" target="_blank" class="btn btn-social-icon btn-map">
+                            <span class="fa fa-4x fa-map-marker"></span>
+                        </a>
+            </ng-template>
+          
+            <!-- <a (click)="jumpvid.paused?jumpvid.play():jumpvid.pause()" id="playbtn" class="btn btn-social-icon btn-play">
+                <span class="fa fa-3x fa-film"></span>
+            </a> -->
+        </div>
+    </div>
+</header>

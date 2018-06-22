@@ -1,0 +1,15 @@
+<div class="event-bubble  bg-primary left-top" *ngFor="let event of events | async">
+  <div class="eventtext" [ngsRevealSet]="{ reset:true}" [ngsInterval]="200" [ngsSelector]="'.btn,.glyphicon-bookmark'">
+    <a href="#">
+      <span class="glyphicon glyphicon-bookmark" style="float:right"></span>
+    </a>
+    <div class="eventtext-header">
+      <h4 class="recent-card-header">{{event.eventName}}</h4>
+    </div>
+    <p class="recent-card-body">{{event.details}}</p>
+    <div class="recent-card-footer">
+      <span>{{event.startDate}}</span>
+      <a href='{{event.link}}' class='btn btn-xs' target="_blank" rel="noopener">Details</a>
+    </div>
+  </div>
+</div>
